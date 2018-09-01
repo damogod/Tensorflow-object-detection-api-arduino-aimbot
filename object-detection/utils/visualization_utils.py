@@ -36,9 +36,9 @@ from win32api import GetSystemMetrics  # get screen pixel value
 Width = GetSystemMetrics(0)
 Height = GetSystemMetrics(1)
 
- # serial communication with arduino; teensy, pi... anything connect with motors
-import serial 
-ser = serial.Serial('COM5',9600) # find your own port, yours should not be COM5
+# Uncommon 2 serial lines after you have your arduino board flashed
+# import serial 
+# ser = serial.Serial('COM5',9600) # find your own port, yours should not be COM5
 
 def mouseGuide(distance):
     nofseps = np.full((1,distance), 0,dtype=bytes)
