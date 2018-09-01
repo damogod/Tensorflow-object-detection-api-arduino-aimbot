@@ -3,7 +3,7 @@
 
 ## Getting Started
 
-This project is heavily base on youtuber sentdex's (TensorFlow Object Detection API Tutorial)[https://www.youtube.com/watch?v=COlbP62-B-U&list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku]. If you don't know anything about tensorflow, strongly recommend to finish his tutorial first. You will definetly know how to use tensorflow objection api and the code here will make sense to you.
+This project is heavily base on youtuber sentdex's [TensorFlow Object Detection API Tutorial](https://www.youtube.com/watch?v=COlbP62-B-U&list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku). If you don't know anything about tensorflow, strongly recommend to finish his tutorial first. You will definetly know how to use tensorflow objection api and the code here will make sense to you.
 
 
 ### Prerequisites
