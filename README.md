@@ -16,6 +16,7 @@ Tensorflow-gpu 1.9.0
 From [tensorflow github repo](https://github.com/tensorflow/models) download models.
 Within reserch folder there is objection-detection.
 Follow sentdex's tutorial, know how to load pre-trained modols, and run real-time object detection.
+49tgraph folder contains the frozen_inference_graph,model i trained on fortnite images which targetting on the player models. by now you should able to load the graph, capture the screen and get the bounding box location.
 
 ## Running the tests
 
