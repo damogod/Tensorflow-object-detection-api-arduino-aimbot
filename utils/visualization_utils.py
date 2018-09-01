@@ -34,12 +34,13 @@ import tensorflow as tf
 
 from object_detection.core import standard_fields as fields
 
-from win32api import GetSystemMetrics
+from win32api import GetSystemMetrics  # get screen pixel value
 Width = GetSystemMetrics(0)
 Height = GetSystemMetrics(1)
 
-import serial
-ser = serial.Serial('COM5',9600)
+ # serial communication with arduino; teensy, pi... anything connect with motors
+import serial 
+ser = serial.Serial('COM5',9600) # find your own port, yours should not be COM5
 
 def mouseGuide(distance):
     nofseps = np.full((1,distance), 0,dtype=bytes)
@@ -681,8 +682,11 @@ def visualize_boxes_and_labels_on_image_array(
           radius=line_thickness / 2,
           use_normalized_coordinates=use_normalized_coordinates)
     
-    # print(((xmax+xmin)/2-0.43)*1000)
-    # print((0.62-(ymax+ymin)/2)*600)
+    # those 2 line calculate x and y value of bounding box location against
+    # the grabed image by percentage.
+    print(((xmax+xmin)/2-0.43)*1000)
+    print((0.62-(ymax+ymin)/2)*600)
+    # calculating distance the motor need to drive
     scalefactor = 100
     xdistance = int(((xmax+xmin)/2-0.43)*scalefactor)
     ydistance = int((0.62-(ymax+ymin)/2)*scalefactor)
@@ -690,7 +694,7 @@ def visualize_boxes_and_labels_on_image_array(
     mouseGuideY(ydistance)
   return image
 
-
+# sending command to your stepper motor hardware
 def mouseGuideX(xdistance):
     if (xdistance>0):
         nofseps = np.full((1,xdistance), 0,dtype=bytes)
@@ -698,7 +702,7 @@ def mouseGuideX(xdistance):
     else:  
         nofseps = np.full((1,abs(xdistance)), 1,dtype=bytes)
         ser.write(nofseps)
-
+# to another stepper motor
 def mouseGuideY(ydistance):
     if ydistance > 0:
         nofseps = np.full((1,ydistance), 2,dtype=bytes)
@@ -706,7 +710,7 @@ def mouseGuideY(ydistance):
     else:
         nofseps = np.full((1,abs(ydistance)), 3,dtype=bytes)
         ser.write(nofseps)
-# Width/2.2,Height/5,Width/1.8,Height/1.3
+
 
 def add_cdf_image_summary(values, name):
   """Adds a tf.summary.image for a CDF plot of the values.
