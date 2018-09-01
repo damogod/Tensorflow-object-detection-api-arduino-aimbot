@@ -12,6 +12,8 @@ Python 3.6.6 Anaconda
 
 Tensorflow-gpu 1.9.0
 
+any version between sentdex's requirement should work
+
 ## Installing
 From [tensorflow github repo](https://github.com/tensorflow/models) download models.
 Within reserch folder there is objection-detection.
