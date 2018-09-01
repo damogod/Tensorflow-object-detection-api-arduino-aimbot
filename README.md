@@ -8,9 +8,9 @@ This project is heavily base on youtuber sentdex's [TensorFlow Object Detection 
 
 ## Prerequisites
 
-Python 3.6.6 :: Anaconda
-tensorflow-gpu 1.9.0
-tensorflow 1.9.0
+#Python 3.6.6 :: Anaconda
+#tensorflow-gpu 1.9.0
+#tensorflow 1.9.0
 
 
 ## Installing
