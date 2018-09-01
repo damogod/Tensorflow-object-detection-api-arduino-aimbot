@@ -13,8 +13,9 @@ Python 3.6.6 Anaconda
 Tensorflow-gpu 1.9.0
 
 ## Installing
-
-
+From [tensorflow github repo](https://github.com/tensorflow/models) download models.
+In reserch there is objection-detection.
+Follow sentdex's tutorial, know how to load pre-trained modols, and run real-time object detection.
 
 ## Running the tests
 
