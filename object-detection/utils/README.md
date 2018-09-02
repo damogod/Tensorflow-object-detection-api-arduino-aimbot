@@ -1,1 +1,3 @@
-## The code here is exactly same in the tensorflow utils repo. It's because the code out put the bounding box is here. It return a percenttage 
+The code here is exactly same in the tensorflow utils repo. I just import serial, win32api lib and add 2 functuions, a few lines inside visualize_boxes_and_labels_on_image_array.
+Within this function, box returns bounding box's xmax, xmin, ymax, ymin value relate your processing image pixel size in percentage. max_boxes_to_draw can return mulitiple bounding boxes, but I just set max box to 1, you can change it for your own application, maybe targeting box with largest area first or highest score first.
+With those percentage, it will send an array of 0-3 to the micro controller, it measures the distance between the middle of the image to middle of the bounding boxes.
