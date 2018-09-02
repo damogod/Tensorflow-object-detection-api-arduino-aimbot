@@ -14,6 +14,10 @@ Tensorflow-gpu 1.9.0
 
 any version between sentdex's requirement should work
 
+Arduino ide and related micro controller
+
+2 stepper motor and drivers(any 3dprinter type can do)
+
 ## Installing
 From [tensorflow github repo](https://github.com/tensorflow/models) download models.
 Within reserch folder there is objection-detection.
