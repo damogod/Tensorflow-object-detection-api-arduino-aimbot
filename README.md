@@ -25,7 +25,7 @@ If every thing works, you can put object-detection-sentdx.py (change the paramet
 
 
 ## Deployment
-
+This is a simple demostration of the application of CNN. It can use to aim any object with fairly good accuracy. You can expand the work to target more object such as car, aeroplane, ship, animal and programme micro controller for more mechanism.
 
 
 ## Built With
