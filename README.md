@@ -18,10 +18,10 @@ any version between sentdex's requirement should work
 From [tensorflow github repo](https://github.com/tensorflow/models) download models.
 Within reserch folder there is objection-detection.
 Follow sentdex's tutorial, know how to load pre-trained modols, and run real-time object detection.
-49tgraph folder contains the frozen_inference_graph,model i trained on fortnite images which targetting on the player models. by now you should able to load the graph, capture the screen and get the bounding box location.
+49tgraph folder contains the frozen_inference_graph,model i trained on fortnite images which targetting on the player models. by now you should know how to load the graph, capture the screen and get the bounding box location.
 
 ## Running the tests
-If every thing works, you can put object-detection-sentdx.py into your objection-detection folder and replace visualization_utils.py in the utils folder, if there is a bounding box you should see printed location in the terminal.
+If every thing works, you can put object-detection-sentdx.py (change the parameter you have) into your objection-detection folder and replace visualization_utils.py in the utils folder, if there is a bounding box you should see printed location in the terminal.
 
 
 ## Deployment
