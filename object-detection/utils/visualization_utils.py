@@ -661,7 +661,7 @@ def visualize_boxes_and_labels_on_image_array(
     print(((xmax+xmin)/2-0.43)*1000)
     print((0.62-(ymax+ymin)/2)*600)
     # calculating distance the motor need to drive
-    scalefactor = 100
+    scalefactor = 10
     xdistance = int(((xmax+xmin)/2-0.43)*scalefactor)
     ydistance = int((0.62-(ymax+ymin)/2)*scalefactor)
     mouseGuideX(xdistance)
@@ -670,7 +670,7 @@ def visualize_boxes_and_labels_on_image_array(
 
 # sending command to your stepper motor hardware
 def mouseGuideX(xdistance):
-    if (xdistance>0):
+    if (xdistance > 0):
         nofseps = np.full((1,xdistance), 0,dtype=bytes)
         ser.write(nofseps)
     else:  
