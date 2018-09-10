@@ -658,12 +658,13 @@ def visualize_boxes_and_labels_on_image_array(
     
     # those 2 line calculate x and y value of bounding box location against
     # the grabed image by percentage.
-    print(((xmax+xmin)/2-0.43)*1000)
-    print((0.62-(ymax+ymin)/2)*600)
+    # print(((xmax+xmin)/2-0.43)*1000)
+    # print((0.62-(ymax+ymin)/2)*600)
     # calculating distance the motor need to drive
-    scalefactor = 10
-    xdistance = int(((xmax+xmin)/2-0.43)*scalefactor)
-    ydistance = int((0.62-(ymax+ymin)/2)*scalefactor)
+    scalefactor = 50
+    xdistance = int(((xmax+xmin)/2-0.333)*scalefactor)
+    ydistance = int((0.51-(ymax+ymin)/2)*scalefactor)
+    # print (xdistance,ydistance)
     mouseGuideX(xdistance)
     mouseGuideY(ydistance)
   return image
