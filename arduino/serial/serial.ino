@@ -26,38 +26,38 @@ void loop() {
 
       case '0':
       digitalWrite(Y_DIR_PIN ,HIGH); 
-          for(int y = 0; y < 50; y++) {
+          for(int y = 0; y < 2; y++) {
             digitalWrite(Y_STEP_PIN,HIGH); 
-            delayMicroseconds(50); 
+            delayMicroseconds(100); 
             digitalWrite(Y_STEP_PIN,LOW); 
-            delayMicroseconds(50);
+            delayMicroseconds(100);
   }
         break;
       case '1':
       digitalWrite(Y_DIR_PIN ,LOW); 
-          for(int y = 0; y < 50; y++) {
+          for(int y = 0; y < 2; y++) {
             digitalWrite(Y_STEP_PIN,HIGH); 
-            delayMicroseconds(50); 
+            delayMicroseconds(100); 
             digitalWrite(Y_STEP_PIN,LOW); 
-            delayMicroseconds(50);
+            delayMicroseconds(100);
   }
         break;
       case '2':
       digitalWrite(Z_DIR_PIN ,HIGH); 
-          for(int y = 0; y < 50; y++) {
+          for(int y = 0; y < 2; y++) {
             digitalWrite(Z_STEP_PIN,HIGH); 
-            delayMicroseconds(50); 
+            delayMicroseconds(100); 
             digitalWrite(Z_STEP_PIN,LOW); 
-            delayMicroseconds(50);
+            delayMicroseconds(100);
   }
         break;
       case '3':
       digitalWrite(Z_DIR_PIN ,LOW); 
-          for(int y = 0; y < 50; y++) {
+          for(int y = 0; y < 2; y++) {
             digitalWrite(Z_STEP_PIN,HIGH); 
-            delayMicroseconds(50); 
+            delayMicroseconds(100); 
             digitalWrite(Z_STEP_PIN,LOW); 
-            delayMicroseconds(50);
+            delayMicroseconds(100);
   }
         break;
     }
