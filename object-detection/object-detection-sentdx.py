@@ -65,13 +65,16 @@ def load_image_into_numpy_array(image):
 last_time = time.time()
 with detection_graph.as_default():
   with tf.Session(graph=detection_graph) as sess:
-    while True: 
-      # mss return 4 array, after reshape to 3 array it's actually slower than imggrab.
-      # image_np = np.asarray(mss.mss().grab({"top": 0, "left": 0, "width": 1280, "height": 720}))[...,:-1] 
-      image_np = cv2.cvtColor(np.array(ImageGrab.grab(bbox=(Width/2.2,Height/5,Width/1.8,Height/1.3))), cv2.COLOR_BGR2RGB)
-      # Expand dimensions since the model expects images to have shape: [1, None, None, 3]
+    while True:
+      # image_np = np.asarray(mss.mss().grab({"top": 0, "left": 0, "width": 1280, "height": 720}))[...,:-1]
+      # image_np = cv2.cvtColor(np.array(ImageGrab.grab(bbox=(Width/2.2,Height/5,Width/1.8,Height/1.3))), cv2.COLOR_BGR2RGB)
+      image_np = cv2.cvtColor(np.array(ImageGrab.grab(bbox=(Width/2-70,Height/2-200,Width/2+140,Height/2+200))), cv2.COLOR_BGR2RGB)
       
+      # Expand dimensions since the model expects images to have shape: [1, None, None, 3]
+      # image_np_expanded = np.expand_dims(image_np, axis=-1)
+      # image_np_expanded = np.repeat(image_np_expanded, 3, 2)
       image_np_expanded = np.expand_dims(image_np, axis=0)
+
       image_tensor = detection_graph.get_tensor_by_name('image_tensor:0')
       # Each box represents a part of the image where a particular object was detected.
       boxes = detection_graph.get_tensor_by_name('detection_boxes:0')
