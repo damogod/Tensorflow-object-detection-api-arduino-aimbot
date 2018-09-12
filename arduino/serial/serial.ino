@@ -26,7 +26,7 @@ void loop() {
 
       case '0':
       digitalWrite(Y_DIR_PIN ,HIGH); 
-          for(int y = 0; y < 2; y++) {
+          for(int y = 0; y < 2; y++) {          # those lines control the steps motor take for wach signal, change 2 to any steps you want to make
             digitalWrite(Y_STEP_PIN,HIGH); 
             delayMicroseconds(100); 
             digitalWrite(Y_STEP_PIN,LOW); 
