@@ -28,7 +28,7 @@ Follow sentdex's tutorial, know how to load pre-trained modols, and run real-tim
 If every thing works, you can put object-detection-sentdx.py (change the parameter you have) into your objection-detection folder and replace visualization_utils.py in the utils folder, if there is a bounding box you should see printed location in the terminal.
 
 ## Result
-The model(49tgraph) is beyond worst, it's missing frame, mistaking grass; trees; rocks; weapons as charactors, can't say it improves the play. The mechanical part is just ok, you need to do settings in number of steps motors rotates for each signal; mouse speed for your own handing or reqirement.
+The model(49tgraph) is beyond worst, frame missing is so severe, i have to lower down threshold to 0.25 for it to work, it end up mistaking grass; trees; rocks; weapons as charactors, can't say it improves play. The mechanical part is just ok, you need to do settings in number of steps motors rotates for each signal; mouse speed for your own handing or reqirement.
 
 ## Deployment
 This is a simple demostration of the application of CNN. The goal is to aim any object with fairly good accuracy. You can expand the work to target more object such as car, aeroplane, ship, animal and programme micro-controller for more mechanism.
