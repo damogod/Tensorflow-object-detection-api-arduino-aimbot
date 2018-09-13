@@ -29,7 +29,7 @@ If every thing works, you can put object-detection-sentdx.py (change the paramet
 
 ## Result
 [videolink](https://youtu.be/udUKzO7BvFY)
-The model(49tgraph) is beyond worst, frame missing is so severe, i have to lower down threshold to 0.25 for it to work, it end up mistaking grass; trees; rocks; weapons as charactors, can't say it improves play. The mechanical part is just ok, you need to do settings in number of steps motors rotates for each signal; mouse speed for your own handing or reqirement.
+The model(49tgraph) is beyond worst, frame missing is so severe, i have to lower down threshold to 0.25 for it to work, it end up mistaking grass; trees; rocks; weapons as charactors, it helps some shoots, but also mess your control alot, can't say it improves the play. The mechanical part is just ok, you need to do settings in number of steps motors rotates for each signal; mouse speed for your own handing or reqirement.
 
 ## Deployment
 This is a simple demostration of the application of CNN. The goal is to aim any object with fairly good accuracy. You can expand the work to target more object such as car, aeroplane, ship, animal and programme micro-controller for more mechanism.
@@ -37,10 +37,7 @@ This is a simple demostration of the application of CNN. The goal is to aim any 
 
 ## Improvement
 Originally I use [Yolo V3 from darknet](https://pjreddie.com/darknet/yolo/), which is very acurate and fast, not need to retrain you own models, thir own weights works flawlessly, memory management speed in C++ is almost trippled than python. However, I'm to lazy to code in C++, I tried keras yolo model in python, it's slow as 300ms. Only tensorflow's mobile net v1 can reach frame rate <30ms. For this application is ok. The most time consuming part is actually grab the screen, which took 60ms. so, you only get 10 frame per second. If using camera or Video Capture Card might drastically improve frame, but you might need a second machine.
-
-## Contributing
-
-Just made for fun
+Due to the low accuracy of the model, should add a switch to engage the motor, so it won't aim all over the place.
 
 ## Authors
 
