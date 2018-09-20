@@ -28,7 +28,7 @@ Follow sentdex's tutorial, know how to load pre-trained modols, and run real-tim
 If every thing works, you can put object-detection-sentdx.py (change the parameter you have) into your objection-detection folder and replace visualization_utils.py in the utils folder, if there is a bounding box you should see printed location in the terminal.
 
 ## Result
-[videolink](https://youtu.be/udUKzO7BvFY)
+[videolink](https://youtu.be/udUKzO7BvFY) The video shows motor controlled optical mouse, tracking and aiming at other players.
 The model(49tgraph) is beyond worst, frame missing is so severe, i have to lower down threshold to 0.25 for it to work, it end up mistaking grass; trees; rocks; weapons as charactors, it helps some shoots, but also mess your control alot, can't say it improves the play. The mechanical part is just ok, you need to do settings in number of steps motors rotates for each signal; mouse speed for your own handing or reqirement.
 
 ## Deployment
